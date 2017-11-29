@@ -1,2 +1,4 @@
 config.yml
 var/ccbot.sqlite3
+ccbot.egg-info
+dist
