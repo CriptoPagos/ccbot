@@ -25,7 +25,7 @@ En caso contrario, consulte <http://www.gnu.org/licenses/agpl.html>.
 """
 @file bot.py Lanzador del bot: crea el bot y lo inicializa con la configuración
 @author Esteban De La Fuente Rubio, DeLaF (esteban[at]sasco.cl)
-@version 2017-11-29
+@version 2017-11-30
 """
 
 # importar módulos
@@ -33,11 +33,7 @@ import sys
 from ccbot import Bot
 
 # crear y lanzar bot con la configuración pasada como parámetro o la por defecto
-try :
-    config = sys.argv[1] if len(sys.argv) == 2 else 'config.yml'
-    Bot = Bot(config)
-    rc = Bot.start()
-    sys.exit(rc)
-except Exception as e:
-    print(e)
-    sys.exit(1)
+config = sys.argv[1] if len(sys.argv) == 2 else 'config.yml'
+Bot = Bot(config)
+rc = Bot.start()
+sys.exit(rc)
